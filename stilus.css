@@ -10,19 +10,46 @@ body {
 }
 main {
     display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "n n"
+    "ar ar as"
+    "f f f";
 }
 header {
     grid-area: h;
 }
 nav {
     grid-area: n;
+    background-color: aqua;
 }
 article {
     grid-area: ar;
+    background-color: blue;
 }
 aside {
     grid-area: as;
+    background-color: chartreuse;
 }
 footer {
     grid-area: f;
+    background-color: brown;
+}
+
+@media screen and (max-width:800px) {
+
+}
+
+@media screen and (max-width:500px) {
+    main {
+        display:grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    }
 }
